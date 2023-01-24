@@ -3,14 +3,14 @@ help: ## Show help menu
 
 download: ## Download spark
 	@rm -rf jars/ extract/
-	@rm spark-3.3.1-bin-hadoop3.tgz jars.tgz
+	@rm -f spark-3.3.1-bin-hadoop3.tgz jars.tgz
 	@wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 	@wget https://yuriniitsuma-public.s3.sa-east-1.amazonaws.com/spark/3.3.1/jars.tgz
 
 extract: ## Extract spark tarball
 	@mkdir -pv extract
 	@tar -xzf spark-3.3.1-bin-hadoop3.tgz -C extract/
-
+	@tar -xzf jars.tgz -C extract/
 	@bash scripts/copy_patched_jars.sh
 	@bash scripts/delete_jars.sh
 
