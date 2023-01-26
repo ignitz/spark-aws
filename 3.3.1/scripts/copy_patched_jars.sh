@@ -69,5 +69,9 @@ cp extract/jars/parquet-hadoop-1.12.2-amzn-1.jar extract/spark-3.3.1-bin-hadoop3
 cp extract/jars/parquet-jackson-1.12.2-amzn-1.jar extract/spark-3.3.1-bin-hadoop3/jars/parquet-jackson-1.12.2-amzn-1.jar
 cp extract/jars/remotetea-oncrpc-1.1.2.jar extract/spark-3.3.1-bin-hadoop3/jars/remotetea-oncrpc-1.1.2.jar
 cp extract/jars/snakeyaml-1.30.jar extract/spark-3.3.1-bin-hadoop3/jars/snakeyaml-1.30.jar
-
 echo "Jars copied to spark-3.3.1-bin-hadoop3/jars"
+
+cp conf/hive-site.xml extract/spark-3.3.1-bin-hadoop3/conf
+cp conf/spark-defaults.conf extract/spark-3.3.1-bin-hadoop3/conf
+
+echo "Configuration files copied."
